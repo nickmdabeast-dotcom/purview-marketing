@@ -33,8 +33,7 @@ const plans = [
       "Implementation guides",
     ],
     highlighted: true,
-    trial: "14-day free trial",
-    cta: "Start Free Trial",
+    cta: "Get Started",
   },
   {
     name: "Pro",
@@ -139,10 +138,10 @@ export function PricingSection() {
                 {plan.description}
               </p>
 
-              {plan.trial && (
+              {(plan as any).trial && (
                 <div className="flex items-center gap-2 mt-4 mb-2 text-sm font-medium text-success">
                   <CheckCircle className="w-4 h-4" />
-                  {plan.trial}
+                  {(plan as any).trial}
                 </div>
               )}
 

@@ -52,6 +52,6 @@ export const faqs = [
   {
     question: "Can I cancel anytime?",
     answer:
-      "Yes, all plans are month-to-month by default (unless you opt for annual savings) and you can cancel anytime from your billing settings. The Growth plan includes a 14-day free trial so you can try everything before you're charged.",
+      "Yes, all plans are month-to-month by default (unless you opt for annual savings) and you can cancel anytime from your billing settings. No long-term contracts or hidden fees.",
   },
 ];
