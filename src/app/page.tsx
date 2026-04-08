@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { AnimatedGrid } from "@/components/animated-grid";
 import { NavBar } from "@/components/nav-bar";
 import { JumpNav } from "@/components/jump-nav";
@@ -16,6 +17,15 @@ import { SecurityBadges } from "@/components/security-badges";
 import { Footer } from "@/components/footer";
 import { SectionDivider } from "@/components/section-divider";
 import { faqs } from "@/lib/faq-data";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://getpurview.com",
+    types: {
+      "text/markdown": "https://getpurview.com/index.md",
+    },
+  },
+};
 
 export default function Home() {
   const faqJsonLd = {

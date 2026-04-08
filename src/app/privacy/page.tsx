@@ -3,7 +3,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy | Purview",
   description: "Purview's privacy policy — how we collect, use, and protect your data.",
-  alternates: { canonical: "https://getpurview.com/privacy" },
+  alternates: {
+    canonical: "https://getpurview.com/privacy",
+    types: {
+      "text/markdown": "https://getpurview.com/privacy.md",
+    },
+  },
 };
 
 export default function PrivacyPage() {

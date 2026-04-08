@@ -1,16 +1,21 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ShieldCheck, Menu, X } from "lucide-react";
 
 const navLinks = [
-  { href: "#features", label: "Features" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#faq", label: "FAQ" },
-];
+  { href: "/#features", label: "Features", route: true },
+  { href: "/#pricing", label: "Pricing", route: true },
+  { href: "/guides", label: "Guides", route: true },
+  { href: "/blog", label: "Blog", route: true },
+  { href: "/#faq", label: "FAQ", route: true },
+] as const;
 
 export function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -34,26 +39,45 @@ export function NavBar() {
   return (
     <nav aria-label="Main navigation" className="fixed top-0 w-full z-40 bg-bg/80 backdrop-blur-md border-b border-border-dark h-16 flex items-center transition-all">
       <div className="max-w-[1440px] mx-auto px-6 w-full flex items-center justify-between">
-        <a href="#hero" className="flex items-center gap-2 group">
+        <Link href="/#hero" className="flex items-center gap-2 group">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-surface-elevated to-surface border border-border-dark flex items-center justify-center group-hover:border-primary/50 transition-all glow-blue">
             <ShieldCheck className="w-[18px] h-[18px] text-primary" />
           </div>
           <span className="font-bold text-xl tracking-tight gradient-text">
             Purview
           </span>
-        </a>
+        </Link>
 
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm text-text-muted hover:text-primary transition-colors relative group"
-            >
-              {link.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const className =
+              "text-sm text-text-muted hover:text-primary transition-colors relative group";
+            const inner = (
+              <>
+                {link.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
+              </>
+            );
+            return "route" in link && link.route ? (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={className}
+                aria-current={pathname === link.href ? "page" : undefined}
+              >
+                {inner}
+              </Link>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                className={className}
+                aria-current={pathname === link.href ? "page" : undefined}
+              >
+                {inner}
+              </a>
+            );
+          })}
         </div>
 
         <div className="flex items-center gap-4">
@@ -87,8 +111,8 @@ export function NavBar() {
           <div className="absolute inset-0 bg-bg/95 backdrop-blur-xl" />
           <div className="relative flex flex-col h-full px-6 pt-6">
             <div className="flex items-center justify-between">
-              <a
-                href="#hero"
+              <Link
+                href="/#hero"
                 onClick={() => setIsMenuOpen(false)}
                 className="flex items-center gap-2"
               >
@@ -98,7 +122,7 @@ export function NavBar() {
                 <span className="font-bold text-xl tracking-tight gradient-text">
                   Purview
                 </span>
-              </a>
+              </Link>
               <button
                 onClick={() => setIsMenuOpen(false)}
                 className="p-2 text-text-muted hover:text-primary transition-colors"
@@ -109,16 +133,31 @@ export function NavBar() {
             </div>
 
             <nav aria-label="Mobile navigation" className="flex flex-col items-center justify-center flex-1 gap-8">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="text-2xl font-medium py-4 text-text-main hover:text-primary transition-colors"
-                >
-                  {link.label}
-                </a>
-              ))}
+              {navLinks.map((link) => {
+                const mobileClass =
+                  "text-2xl font-medium py-4 text-text-main hover:text-primary transition-colors";
+                return "route" in link && link.route ? (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={mobileClass}
+                    aria-current={pathname === link.href ? "page" : undefined}
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={mobileClass}
+                    aria-current={pathname === link.href ? "page" : undefined}
+                  >
+                    {link.label}
+                  </a>
+                );
+              })}
               <a
                 href="https://app.getpurview.com/login"
                 onClick={() => setIsMenuOpen(false)}

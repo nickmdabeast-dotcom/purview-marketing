@@ -50,9 +50,6 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
-  alternates: {
-    canonical: "https://getpurview.com",
-  },
 };
 
 export default function RootLayout({
@@ -62,6 +59,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${robotoMono.variable} scroll-smooth`} suppressHydrationWarning>
+      <head>
+        <link
+          rel="alternate"
+          type="text/plain"
+          title="LLM-readable site information"
+          href="/llms.txt"
+        />
+      </head>
       <body className="font-sans antialiased">
         <a
           href="#main-content"

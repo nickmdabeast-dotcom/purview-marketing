@@ -3,7 +3,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms of Service | Purview",
   description: "Purview's terms of service — usage terms and conditions for our privacy compliance platform.",
-  alternates: { canonical: "https://getpurview.com/terms" },
+  alternates: {
+    canonical: "https://getpurview.com/terms",
+    types: {
+      "text/markdown": "https://getpurview.com/terms.md",
+    },
+  },
 };
 
 export default function TermsPage() {

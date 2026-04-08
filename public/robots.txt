@@ -1,5 +1,76 @@
+# Purview — Multi-State Privacy Compliance
+# https://getpurview.com
+#
+# Markdown mirrors of every public page are available at the parallel .md URL
+# (e.g. /index.md, /privacy.md, /terms.md). LLM-readable site directory lives
+# at /llms.txt. AI crawlers are explicitly welcomed.
+
 User-agent: *
 Allow: /
 Disallow: /api/
+
+# AI Crawlers — explicitly welcomed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# LLM-readable site directory
+# https://getpurview.com/llms.txt
 
 Sitemap: https://getpurview.com/sitemap.xml

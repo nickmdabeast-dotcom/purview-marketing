@@ -41,6 +41,21 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async rewrites() {
+    // Markdown mirror routes — each public page has a .md twin served by
+    // /api/md/[slug]. Static-page mirrors live in src/lib/markdown-mirrors.ts;
+    // blog-post mirrors are read from content/blog/*.mdx by /api/md/blog/[slug];
+    // guide mirrors are read from content/guides/*.mdx by /api/md/guides/[slug].
+    return [
+      { source: "/index.md", destination: "/api/md/index" },
+      { source: "/privacy.md", destination: "/api/md/privacy" },
+      { source: "/terms.md", destination: "/api/md/terms" },
+      { source: "/blog.md", destination: "/api/md/blog-index" },
+      { source: "/guides.md", destination: "/api/md/guides-index" },
+      { source: "/blog/:slug.md", destination: "/api/md/blog/:slug" },
+      { source: "/guides/:slug.md", destination: "/api/md/guides/:slug" },
+    ];
+  },
 };
 
 export default nextConfig;
