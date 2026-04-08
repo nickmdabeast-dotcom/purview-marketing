@@ -1,0 +1,173 @@
+---
+title: "Maryland Privacy Law (MODPA) Compliance Guide for Small Businesses"
+description: "Maryland MODPA has the strictest data minimization in the US: 35,000 consumer threshold, no revenue floor, plus mandatory secondary use limitations."
+datePublished: "2026-04-07"
+dateModified: "2026-04-07"
+author: "Nikolas"
+category: "state-law"
+targetKeyword: "maryland privacy law compliance"
+---
+
+# Maryland Privacy Law (MODPA): What Small Businesses Need to Know
+
+The Maryland Online Data Privacy Act (MODPA) took effect **October 1, 2025**, and applies to any business processing the personal data of **35,000 or more Maryland consumers** in a calendar year — with **no annual revenue threshold**. The secondary trigger captures businesses processing data of just **10,000 Maryland consumers** and deriving **20% or more** of revenue from data sales — among the most expansive in the country, alongside Delaware and Rhode Island. Most distinctively, MODPA includes the strictest data minimization requirements of any US state privacy law: businesses are prohibited from collecting or processing personal data beyond what is reasonably necessary and proportionate to provide the specific product or service requested by the consumer. The Maryland Attorney General is the sole enforcement authority.
+
+---
+
+## Does MODPA Apply to My Business?
+
+MODPA applies to any person that conducts business in Maryland or produces products or services targeted to Maryland residents AND meets one of two thresholds:
+
+- Controls or processes personal data of **35,000 or more Maryland consumers** during a calendar year (excluding personal data processed solely to complete a payment transaction), OR
+- Controls or processes personal data of **10,000 or more Maryland consumers** AND derives **more than 20%** of gross revenue from the sale of personal data.
+
+The threshold logic is **OR**, with no revenue floor under either path. Maryland's 10,000 + 20% combination is one of the most expansive in any US state privacy law.
+
+| Threshold | Maryland MODPA | CCPA/CPRA | Connecticut CTDPA |
+|-----------|----------------|-----------|-------------------|
+| Revenue | None | $25M+ | None |
+| Consumer count | **35,000** | 100,000 | 35,000 |
+| Data sale alternative | **10K + 20%** | 50% revenue share | 25K + 25% |
+| Threshold logic | OR | OR | OR |
+
+Maryland accounts for roughly 1.9% of the US population. A national e-commerce store with approximately 1.9 million annual unique US visitors would, on a population basis, reach 35,000 Maryland consumers. The 10,000 + 20% data sale path is a much lower bar that catches mid-size businesses with ad tech monetization.
+
+---
+
+## What Does MODPA Require?
+
+MODPA grants Maryland consumers a comprehensive set of rights and includes the most expansive data minimization and purpose limitation requirements of any US state privacy law.
+
+**Consumer rights you must honor.** Access, correction, deletion, portability, and opt-out of targeted advertising, sale of personal data, and profiling that produces legal or similarly significant effects. Response deadline is 45 days, with one possible extension. Consumers have the right to appeal denied requests.
+
+**Disclosures you must publish.** Privacy notice covering categories of personal data processed, the express purposes of processing, third-party sharing categories, and instructions for exercising rights and appealing denials.
+
+**Operational practices you must implement.** Conduct data protection assessments for high-risk processing. Obtain affirmative opt-in consent before processing sensitive personal data. Honor universal opt-out signals including GPC. Establish reasonable security practices.
+
+**Data minimization (the distinctive requirement).** MODPA prohibits collecting, processing, or sharing personal data that is not reasonably necessary and proportionate to provide the product or service the consumer requested. This is a stricter standard than CPRA's data minimization rule. Businesses cannot collect data "just in case" or for unrelated future uses. The collected data must be tied directly to the consumer's specific request.
+
+**Secondary use limitations.** MODPA prohibits processing personal data for purposes that are not reasonably necessary to or compatible with the disclosed purposes, unless the business obtains the consumer's consent. This requires explicit purpose declarations in the privacy notice and prevents repurposing data without consent.
+
+**Sensitive data restrictions.** MODPA goes further than other state laws on sensitive data: it **prohibits the sale of sensitive personal data entirely**, regardless of consent. Consumers cannot opt in to allowing the sale of their sensitive data — the sale is simply not permitted.
+
+---
+
+## How MODPA Affects Small Businesses
+
+MODPA is the most operationally demanding state privacy law currently in effect, primarily because of the data minimization and secondary use restrictions. Most businesses collect personal data more broadly than strictly necessary to fulfill the immediate consumer request — for analytics, future marketing, customer profiling, or general operational purposes. Under MODPA, those collection practices may not be permitted.
+
+For Shopify merchants and direct-to-consumer brands, this means a meaningful operational rethinking. A standard checkout flow that collects email, shipping address, billing information, phone number, and marketing preferences may collect more than is reasonably necessary for the specific transaction. Each data field needs to be tied to a specific, declared purpose. Future use of that data — for retention marketing, lookalike audiences, customer segmentation — may require consumer consent.
+
+The 35,000 consumer threshold combined with no revenue floor and the 10,000 + 20% data sale secondary trigger means MODPA catches more mid-size businesses than most other state privacy laws. The combination of expansive scope and strict operational requirements makes Maryland one of the highest-priority compliance targets for nationally distributed e-commerce businesses.
+
+The absolute prohibition on selling sensitive personal data is also worth understanding. Even with consumer consent, businesses cannot sell precise geolocation, health data, biometric identifiers, or other sensitive categories under MODPA. This is stricter than every other state privacy law.
+
+---
+
+## Key Differences from Other State Privacy Laws
+
+MODPA stands out from other state privacy laws on several dimensions:
+
+**Strictest data minimization.** Maryland is the only state that requires data collection to be tied directly to the specific product or service requested. CPRA requires data minimization but uses a less restrictive standard.
+
+**Secondary use limitations.** MODPA requires consumer consent for any processing beyond the disclosed purposes — most other state laws are more permissive on secondary use.
+
+**Absolute prohibition on selling sensitive data.** Most state privacy laws allow selling sensitive data with consent. Maryland prohibits it outright.
+
+**Low thresholds.** 35,000 consumers (matching Connecticut, Delaware, New Hampshire, Rhode Island) and 10,000 + 20% data sale revenue (matching Delaware) make MODPA broadly applicable.
+
+**Universal opt-out signal mandate.** Like California, Colorado, Connecticut, and Delaware, Maryland requires honoring GPC.
+
+Compared to **California CCPA/CPRA**, MODPA has stricter data minimization but no private right of action and no dedicated enforcement agency. Compared to **Connecticut CTDPA**, MODPA has the same primary threshold but stricter data handling requirements. Compared to **Iowa ICDPA**, MODPA is dramatically more demanding.
+
+---
+
+## How to Comply with MODPA
+
+If MODPA applies to your business, the following steps establish a baseline.
+
+1. **Confirm scope at the lower threshold.** Calculate Maryland consumer count from analytics and customer records. Treat 35,000 as the trigger, or 10,000 if 20%+ of revenue comes from data sales.
+2. **Audit your data collection against the minimization standard.** For each data field you collect, identify the specific product or service it is necessary for. Eliminate or gate fields that are not strictly necessary.
+3. **Document express purposes.** For each data category, declare the purposes you will use it for. Processing for any other purpose requires consumer consent.
+4. **Stop selling sensitive personal data.** If you sell precise geolocation, health, biometric, or other sensitive categories — even with consent — cease the practice for Maryland consumers.
+5. **Implement automatic GPC signal handling.** Detect Global Privacy Control browser headers and apply opt-out preferences automatically.
+6. **Update your privacy notice** with categories, express purposes, third-party sharing, rights, and appeals process.
+7. **Add explicit opt-out mechanisms** for targeted advertising, sale of personal data, and profiling.
+8. **Build a consumer rights request workflow** with the 45-day response deadline tracked.
+9. **Build a denial appeals process** with timely written response.
+10. **Implement opt-in consent for sensitive data** and obtain explicit consent for any secondary uses.
+11. **Conduct data protection assessments** for high-risk processing activities.
+12. **Document reasonable security practices** appropriate to the volume and nature of data you process.
+
+---
+
+## MODPA Enforcement and Penalties
+
+The Maryland Attorney General has exclusive enforcement authority for MODPA. There is no private right of action — Maryland consumers cannot sue businesses directly. The AG may seek civil penalties under Maryland's Consumer Protection Act, with penalties of up to **$10,000 per violation** for the first violation and up to **$25,000 per subsequent violation**.
+
+MODPA includes a **60-day cure period** before formal enforcement during the first 18 months after the law's effective date (until April 1, 2027), after which the cure period becomes discretionary. Businesses notified of violations during the cure-period window have a clear path to avoid enforcement by acting within 60 days.
+
+Maryland is expected to be a more active enforcement state given the strict substantive requirements. Businesses should not rely on a quiet enforcement environment.
+
+---
+
+## Frequently Asked Questions
+
+### When does Maryland's privacy law take effect?
+
+Maryland's Online Data Privacy Act (MODPA) took effect October 1, 2025. It has a 35,000 Maryland consumer threshold with no revenue minimum and includes the strictest data minimization requirements of any US state privacy law.
+
+### Does MODPA have a revenue threshold?
+
+No. MODPA applies based on consumer data volume only: 35,000 or more Maryland consumers annually, or 10,000 or more consumers if 20% or more of revenue comes from data sales. There is no annual revenue minimum.
+
+### What is unique about MODPA's data minimization requirements?
+
+Maryland requires businesses to collect only personal data that is reasonably necessary and proportionate to provide the specific product or service the consumer requested. This is stricter than CPRA's standard. Future use of data — for retention marketing, lookalike audiences, profiling — may require explicit consumer consent. Businesses cannot collect data "just in case."
+
+### Does MODPA prohibit selling sensitive data?
+
+Yes. MODPA prohibits the sale of sensitive personal data entirely, regardless of consent. This is stricter than every other US state privacy law, which allow sales of sensitive data with appropriate consent.
+
+### Does MODPA require honoring universal opt-out signals?
+
+Yes. MODPA requires covered businesses to honor universal opt-out mechanisms, including the Global Privacy Control browser signal. Your website must detect the GPC header and apply opt-out preferences automatically.
+
+### What are the penalties for MODPA violations?
+
+The Maryland AG can seek civil penalties of up to $10,000 per first violation and $25,000 per subsequent violation under Maryland's Consumer Protection Act. There is no private right of action. A 60-day cure period applies during the first 18 months after the effective date.
+
+---
+
+**Check if MODPA applies to your business →** [Take the free 5-minute quiz](https://app.getpurview.com/quiz)
+
+*This guide is for informational purposes only and does not constitute legal advice. Last updated: April 2026.*
+
+---
+
+<FAQSchema questions={[
+  {
+    question: "When does Maryland's privacy law take effect?",
+    answer: "Maryland's Online Data Privacy Act (MODPA) took effect October 1, 2025. It has a 35,000 consumer threshold with no revenue minimum and includes data minimization requirements."
+  },
+  {
+    question: "Does MODPA have a revenue threshold?",
+    answer: "No. MODPA applies based on consumer data volume: 35,000+ Maryland consumers annually, or 10,000+ consumers with 20%+ data sale revenue."
+  },
+  {
+    question: "What is unique about MODPA's data minimization requirements?",
+    answer: "Maryland requires businesses to collect only personal data reasonably necessary and proportionate to provide the specific product or service requested. This is stricter than CPRA — future use of data may require explicit consent."
+  },
+  {
+    question: "Does MODPA prohibit selling sensitive data?",
+    answer: "Yes. MODPA prohibits the sale of sensitive personal data entirely, regardless of consent. This is stricter than every other US state privacy law."
+  },
+  {
+    question: "Does MODPA require honoring universal opt-out signals?",
+    answer: "Yes. MODPA requires covered businesses to honor universal opt-out mechanisms including the Global Privacy Control browser signal."
+  },
+  {
+    question: "What are the penalties for MODPA violations?",
+    answer: "The Maryland AG can seek civil penalties of up to $10,000 per first violation and $25,000 per subsequent violation. A 60-day cure period applies during the first 18 months."
+  }
+]} />
