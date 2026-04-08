@@ -1,0 +1,162 @@
+---
+title: "Colorado Privacy Law (CPA) Compliance Guide for Small Businesses"
+description: "Colorado CPA applies to businesses processing data of 100,000+ Colorado consumers annually. No revenue threshold. GPC signals must be honored."
+datePublished: "2026-04-07"
+dateModified: "2026-04-07"
+author: "Nikolas"
+category: "state-law"
+targetKeyword: "colorado privacy law compliance"
+---
+
+# Colorado Privacy Law (CPA): What Small Businesses Need to Know
+
+The Colorado Privacy Act (CPA) took effect July 1, 2023, and applies to any business that processes the personal data of **100,000 or more Colorado consumers** in a calendar year — with **no annual revenue threshold**. A secondary trigger captures businesses processing data of 25,000 or more Colorado consumers and deriving any portion of revenue from data sales (Colorado does not require a specific revenue percentage on this path). The Colorado Attorney General is the sole enforcement authority. The most distinctive operational requirement: Colorado was the first state to mandate that covered businesses honor universal opt-out mechanisms — specifically the Global Privacy Control (GPC) browser signal — as a binding opt-out request, automatically.
+
+---
+
+## Does CPA Apply to My Business?
+
+CPA applies to any controller that conducts business in Colorado or produces commercial products or services intentionally targeted to Colorado residents AND meets one of two thresholds:
+
+- Controls or processes personal data of **100,000 or more Colorado consumers** during a calendar year, OR
+- Derives revenue or receives a discount from the sale of personal data AND processes personal data of **25,000 or more Colorado consumers**.
+
+The threshold logic is **OR** — only one needs to be met. Colorado's secondary path is broader than most other state laws because it does not require a specific revenue percentage from data sales — any revenue or discount counts.
+
+| Threshold | Colorado CPA | CCPA/CPRA | Texas TDPSA |
+|-----------|--------------|-----------|-------------|
+| Revenue | None | $25M+ | None |
+| Consumer count | 100,000 | 100,000 | 100,000 |
+| Data sale alternative | 25K + any data sale revenue | 50% revenue share | 25K + 50% |
+| Threshold logic | OR | OR | OR |
+
+Colorado accounts for roughly 1.7% of the US population. A national e-commerce store with approximately 5.9 million annual unique US visitors would, on a population basis, reach 100,000 Colorado consumers. The 25,000-consumer-plus-any-data-sale path is the more expansive trigger for businesses with ad tech partnerships, affiliate networks, or analytics arrangements that meet the broad statutory definition of "sale of personal data."
+
+CPA exempts certain entity types and data categories: financial institutions subject to GLBA, HIPAA-covered entities and their data, Driver's Privacy Protection Act data, FERPA records, and air carriers. Most consumer-facing e-commerce businesses are not exempt under any of these.
+
+---
+
+## What Does CPA Require?
+
+CPA grants Colorado consumers a robust set of data rights and imposes corresponding obligations. The Colorado Attorney General has issued detailed implementing regulations that go beyond the statute itself — businesses must comply with both.
+
+**Consumer rights you must honor.** Colorado consumers may access the personal data you hold about them, correct inaccurate data, delete personal data, obtain a copy in a portable format, and opt out of three specific processing activities: targeted advertising, the sale of personal data, and profiling that produces legal or similarly significant effects. You must respond within 45 days, with one possible 45-day extension. Consumers also have the right to appeal denials, with a 45-day response requirement.
+
+**Disclosures you must publish.** Your privacy notice must list categories of personal data processed, purposes of processing, the categories of personal data sold or processed for targeted advertising and how consumers can opt out, the categories of third parties with which data is shared, and how consumers can exercise their rights and appeal denials.
+
+**Operational practices you must implement.** Covered businesses must conduct data protection assessments for high-risk processing activities. You must obtain affirmative opt-in consent before processing sensitive personal data. You must establish reasonable security practices. And critically, you must **honor universal opt-out signals**, including the Global Privacy Control. The Colorado AG's regulations provide detailed technical specifications for what counts as a valid universal opt-out mechanism.
+
+---
+
+## How CPA Affects Small Businesses
+
+Colorado's universal opt-out mechanism requirement is the operational issue that catches the most businesses by surprise. Honoring GPC is not a privacy policy update — it is a JavaScript-level technical implementation. Your website must detect the GPC browser header on every visitor session and automatically apply opt-out preferences for targeted advertising, sale, and profiling. If your site uses Google Analytics, Meta Pixel, TikTok Pixel, or other ad tech tags, those tags must be conditionally suppressed or anonymized for visitors sending GPC.
+
+For Shopify merchants, this means working with your tag management or consent management platform to implement GPC handling. Some Shopify-native consent apps support GPC out of the box; others require manual JavaScript configuration. Doing nothing is the most common failure mode and the most likely to draw enforcement attention.
+
+The second Colorado-specific dynamic is the AG's detailed regulations. Unlike most state privacy laws, Colorado has issued multi-hundred-page implementing regulations that specify how rights requests must be processed, how privacy notices must be structured, what counts as consent, how data protection assessments must be documented, and what universal opt-out mechanisms must look like technically. The regulations are binding alongside the statute. Reading just the law is not enough.
+
+The third dynamic is the broad data sale secondary threshold. CPA's 25,000-consumer-plus-any-data-sale-revenue path catches businesses that would not consider themselves "in the data sale business" but that participate in ad tech ecosystems involving data sharing for valuable consideration. The federal definition of "sale" is broader than most operators expect.
+
+---
+
+## Key Differences from Other State Privacy Laws
+
+Colorado CPA stands out from other state privacy laws on three dimensions: detailed implementing regulations, the universal opt-out signal mandate, and the broad secondary threshold.
+
+Compared to **Virginia VCDPA**, the laws are structurally similar but Colorado is more demanding operationally. Both lack revenue thresholds and use 100,000 as the primary consumer threshold. But Colorado requires GPC handling and has issued detailed implementing regulations that Virginia has not. Colorado's secondary threshold (25,000 consumers + any data sale revenue) is also broader than Virginia's (25,000 + 50%).
+
+Compared to **Texas TDPSA**, Colorado has stricter operational requirements (GPC mandate, detailed regulations) but Texas has the SBA small business exemption, which Colorado does not. The thresholds are otherwise similar.
+
+Compared to **California CCPA/CPRA**, Colorado is similar in requiring GPC handling — these are the two states that have made universal opt-out signal compliance a binding obligation. But California has a dedicated enforcement agency (CPPA), a private right of action for breaches, and broader sensitive data protections. Colorado relies on the AG and provides no private right of action.
+
+Compared to **Connecticut CTDPA**, Colorado's threshold is higher (100,000 vs 35,000), but Colorado's regulations are more developed and Colorado's universal opt-out signal mandate has been enforced more aggressively in practice.
+
+---
+
+## How to Comply with CPA
+
+If CPA applies to your business, the following compliance steps establish a baseline.
+
+1. **Confirm scope.** Calculate annual Colorado consumer count from analytics, customer records, and email lists. Also evaluate whether you derive any revenue from arrangements that meet the broad "sale of personal data" definition with at least 25,000 Colorado consumers.
+2. **Read the Colorado AG's implementing regulations.** The regulations are detailed and binding alongside the statute. Skipping this step is the single most common compliance failure.
+3. **Implement automatic GPC signal handling.** Your website must detect Global Privacy Control browser headers and automatically apply opt-out preferences for targeted advertising, sale, and profiling. This is a technical implementation involving your tag manager, consent management platform, or custom JavaScript.
+4. **Update your privacy notice** with the categories, purposes, third-party sharing, opt-out instructions, rights process, and appeals process required by both the statute and regulations.
+5. **Add explicit opt-out mechanisms** for targeted advertising, sale of personal data, and profiling, as a backup to GPC handling.
+6. **Build a consumer rights request workflow** with the 45-day response deadline tracked, plus an appeals process with a 45-day response requirement.
+7. **Implement opt-in consent for sensitive data**, including precise geolocation, health, biometric, religious beliefs, sexual orientation, and other categories enumerated in the statute and regulations.
+8. **Conduct data protection assessments** for high-risk processing activities. The Colorado regulations specify what these assessments must include — follow the structure precisely. Retain for AG review.
+9. **Document reasonable security practices** appropriate to the volume and nature of personal data you process.
+
+---
+
+## CPA Enforcement and Penalties
+
+The Colorado Attorney General has exclusive enforcement authority for CPA. There is no private right of action — Colorado consumers cannot sue businesses directly. The AG may seek civil penalties under the Colorado Consumer Protection Act, which provides for **civil penalties of up to $20,000 per violation**, with a separate cap for ongoing violations.
+
+The original CPA included a 60-day cure period before enforcement. **That mandatory cure period sunset on January 1, 2025.** Since then, the AG has discretion to grant a cure opportunity but is not required to.
+
+The Colorado AG has been actively enforcing CPA since 2024, with universal opt-out signal compliance, sensitive data processing, and data protection assessments as stated priorities. Colorado has been one of the more aggressive AG offices in privacy enforcement, second only to the California CPPA.
+
+---
+
+## Frequently Asked Questions
+
+### What is unique about Colorado's privacy law?
+
+Colorado was the first state to require businesses to honor universal opt-out mechanisms, including the Global Privacy Control (GPC) browser signal. This means your website must detect and respond to this signal automatically — a technical requirement beyond just updating your privacy policy. Colorado has also issued detailed implementing regulations that go beyond the statute itself.
+
+### Does Colorado CPA have a revenue threshold?
+
+No. CPA applies based on consumer data volume only: 100,000+ Colorado consumers annually, or 25,000+ Colorado consumers if you derive any revenue or discount from selling personal data. There is no annual revenue minimum.
+
+### When did Colorado CPA take effect?
+
+Colorado CPA took effect July 1, 2023. The Colorado Attorney General has been the sole enforcement authority since that date. The mandatory 60-day cure period sunset on January 1, 2025.
+
+### Does CPA require honoring Global Privacy Control?
+
+Yes. CPA explicitly requires covered businesses to honor universal opt-out mechanisms, and the Colorado AG's regulations specify GPC as a recognized mechanism. Your website must detect the GPC browser header and apply opt-out preferences automatically. This has been a primary enforcement target.
+
+### What are the penalties for CPA violations?
+
+CPA violations are enforced under the Colorado Consumer Protection Act, with civil penalties of up to $20,000 per violation. There is no private right of action. The mandatory cure period sunset at the start of 2025.
+
+### Are the Colorado AG's regulations binding?
+
+Yes. The Colorado AG has issued detailed implementing regulations alongside the statute. The regulations are legally binding and cover privacy notices, rights requests, consent, sensitive data processing, data protection assessments, and universal opt-out mechanisms. Compliance requires reading both the statute and the regulations.
+
+---
+
+**Check if CPA applies to your business →** [Take the free 5-minute quiz](https://app.getpurview.com/quiz)
+
+*This guide is for informational purposes only and does not constitute legal advice. Last updated: April 2026.*
+
+---
+
+<FAQSchema questions={[
+  {
+    question: "What is unique about Colorado's privacy law?",
+    answer: "Colorado requires businesses to honor universal opt-out mechanisms, including the Global Privacy Control (GPC) browser signal. This means your website must detect and respond to this signal automatically — a technical requirement beyond just updating your privacy policy."
+  },
+  {
+    question: "Does Colorado CPA have a revenue threshold?",
+    answer: "No. CPA applies based on consumer data volume only: 100,000+ Colorado consumers annually, or 25,000+ Colorado consumers with any revenue from selling personal data."
+  },
+  {
+    question: "When did Colorado CPA take effect?",
+    answer: "Colorado CPA took effect July 1, 2023. The mandatory 60-day cure period sunset on January 1, 2025."
+  },
+  {
+    question: "Does CPA require honoring Global Privacy Control?",
+    answer: "Yes. CPA explicitly requires covered businesses to honor universal opt-out mechanisms, and the Colorado AG's regulations specify GPC as a recognized mechanism."
+  },
+  {
+    question: "What are the penalties for CPA violations?",
+    answer: "CPA violations are enforced under the Colorado Consumer Protection Act, with civil penalties of up to $20,000 per violation. There is no private right of action."
+  },
+  {
+    question: "Are the Colorado AG's regulations binding?",
+    answer: "Yes. The Colorado AG has issued detailed implementing regulations that are legally binding alongside the statute. They cover privacy notices, rights requests, consent, sensitive data, assessments, and universal opt-out mechanisms."
+  }
+]} />

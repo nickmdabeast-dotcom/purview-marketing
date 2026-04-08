@@ -1,0 +1,156 @@
+---
+title: "California Privacy Law (CCPA/CPRA) Compliance Guide for Small Businesses"
+description: "CCPA/CPRA applies to for-profit businesses meeting any one of: $25M+ revenue, 100K+ California consumers, or 50%+ revenue from data sales."
+datePublished: "2026-04-07"
+dateModified: "2026-04-07"
+author: "Nikolas"
+category: "state-law"
+targetKeyword: "california privacy law compliance"
+---
+
+# California Privacy Law (CCPA/CPRA): What Small Businesses Need to Know
+
+The California Consumer Privacy Act (CCPA), as amended by the California Privacy Rights Act (CPRA), applies to any for-profit business that does business in California and meets at least one of three thresholds: $25 million or more in annual gross revenue, processes the personal data of 100,000 or more California consumers per year, or derives 50% or more of annual revenue from selling or sharing California consumer data. CCPA took effect January 1, 2020. CPRA amendments took full effect January 1, 2023, with enforcement beginning July 1, 2023. The California Privacy Protection Agency (CPPA) is the dedicated enforcement body — the only such agency in the United States.
+
+---
+
+## Does CCPA/CPRA Apply to My Business?
+
+CCPA/CPRA uses **OR logic**, meaning you only need to meet **one** of the three qualifying thresholds for the law to apply. This is one of the most misunderstood facts about California privacy law. Many small business owners assume the $25 million revenue threshold protects them, but the consumer count threshold (100,000 California consumers) catches many mid-size Shopify stores and direct-to-consumer brands without warning.
+
+A business is in scope if it does business in California (which courts interpret broadly — having California customers is generally sufficient) AND meets any one of:
+
+- $25 million or more in annual gross revenue (worldwide, not just California)
+- Processes personal information of 100,000 or more California consumers, households, or devices annually
+- Derives 50% or more of annual revenue from selling or sharing California consumer personal information
+
+| Threshold | CCPA/CPRA | Texas TDPSA | Connecticut CTDPA |
+|-----------|-----------|-------------|-------------------|
+| Revenue | $25M+ | None | None |
+| Consumer count | 100,000 | 100,000 | 35,000 |
+| Data sale share | 50%+ | 50%+ (with 25K consumers) | 25%+ (with 25K consumers) |
+| Threshold logic | OR | OR | OR |
+
+The "consumer" definition is broad. It includes anyone whose personal information you collect — not just paying customers. Email subscribers, account holders, abandoned-cart visitors, and browser-fingerprinted shoppers all count toward the 100,000 threshold. California represents roughly 12% of the US population, so a national e-commerce store with 850,000 or more annual unique US visitors is likely within range.
+
+---
+
+## What Does CCPA/CPRA Require Businesses to Do?
+
+CCPA/CPRA grants California consumers nine core rights and imposes corresponding obligations on covered businesses. These break down into three categories: consumer rights you must honor, disclosures you must publish, and operational practices you must implement.
+
+**Consumer rights you must honor.** Consumers have the right to know what personal information you collect and why, the right to access copies of their data, the right to delete personal information you hold about them, the right to correct inaccurate information, the right to opt out of the sale or sharing of their personal information, and the right to limit your use of sensitive personal information categories such as Social Security number, geolocation, and health data. Each request must be answered within 45 days, with one possible 45-day extension.
+
+**Disclosures you must publish.** Your privacy policy must list the specific categories of personal information you collect, the sources you collect it from, the business or commercial purposes you use it for, and the categories of third parties you share it with. The policy must be updated at least annually and must describe how consumers can exercise their rights. A generic Shopify-template privacy policy will almost certainly not meet CPRA's specific requirements.
+
+**Operational practices you must implement.** Covered businesses must honor the Global Privacy Control (GPC) browser signal as a valid opt-out request automatically — manually managing opt-outs is not sufficient. You must establish data retention policies that limit how long you keep personal information. CPRA also introduced data minimization: you may only collect and use personal information that is reasonably necessary and proportionate to the disclosed purpose.
+
+---
+
+## How CCPA/CPRA Affects Small Businesses
+
+California has the broadest practical reach of any US state privacy law because of its size (the largest state economy in the country) and the way the consumer threshold interacts with national e-commerce. A Shopify merchant headquartered in Ohio that ships nationally and processes 100,000 California consumer records — a count many merchants reach without realizing it — is just as in scope as a California-based startup. The CPPA does not care where your business is located. It cares where your consumers are.
+
+For small e-commerce operators, the practical impact tends to come in three waves. First, the privacy policy needs a substantial rewrite to disclose the categories required by CPRA. Generic policies generated by Shopify apps are usually missing required disclosures around sensitive personal information categories and data retention. Second, the website needs to detect and honor the GPC signal, which is a JavaScript-level technical change rather than a copy update. Third, the business needs a documented and tested process for responding to consumer rights requests within 45 days — including identity verification, internal routing, and recordkeeping.
+
+The CPPA has been actively enforcing since 2023 and has issued multiple settlements in the six- and seven-figure range, often targeting businesses that did not implement opt-out mechanisms correctly or that failed to honor GPC signals. Enforcement has not been limited to large companies; mid-size online retailers have been investigated. Treating CCPA/CPRA as a "California-only" or "big company" issue is the single most common compliance mistake.
+
+---
+
+## Key Differences from Other State Privacy Laws
+
+CCPA/CPRA stands out from the other 19 state privacy laws in several important ways. It is the only state privacy law with a dedicated enforcement agency (the CPPA) rather than relying on the state Attorney General. It is the only state law that grants consumers a private right of action — California consumers can sue directly for statutory damages in the event of a data breach involving unencrypted personal information, even without proving financial harm. Most other state laws restrict enforcement to the AG only.
+
+CCPA/CPRA also has the most expansive consumer definition. The law treats "consumers, households, and devices" as units of measurement, which means that fingerprinted browsers and shared family devices count toward the 100,000 threshold even when there is no logged-in user. Most other state privacy laws count individual natural persons only.
+
+Compared to Texas TDPSA and Virginia VCDPA, California is the only law of the three with a revenue threshold — but the consumer count alternative makes that distinction less protective than it sounds for nationally distributed businesses. Compared to Utah UCPA, which uses AND logic (you must meet both revenue and consumer thresholds), California's OR logic captures dramatically more businesses. And compared to newer laws like Maryland MODPA, California is more permissive in some ways: MODPA includes stricter data minimization rules than CPRA.
+
+---
+
+## How to Comply with CCPA/CPRA
+
+If your business meets any one CCPA/CPRA threshold, the following steps establish baseline compliance. They are listed in execution order — do not skip ahead.
+
+1. **Confirm scope.** Calculate your annual California consumer count using analytics by state, total California-attributed revenue, and the percentage of revenue derived from data sales or sharing. If you meet any one threshold, you are in scope.
+2. **Update your privacy policy.** Disclose every category of personal information you collect, the sources, the business and commercial purposes, the categories of third parties you share with, your retention periods, and instructions for exercising each consumer right.
+3. **Add a "Do Not Sell or Share My Personal Information" link.** Place it in the website footer and on any page where personal information is collected. The link must lead to a working opt-out mechanism, not a contact form.
+4. **Implement automatic GPC signal handling.** Your website must detect the Global Privacy Control browser header and apply opt-out preferences automatically for users sending the signal. This is a technical implementation, not a policy update.
+5. **Build a consumer rights request process.** Document the workflow: how requests come in, how you verify identity, how you route requests internally, who fulfills them, and how you respond within the 45-day deadline. Test it before you receive a real request.
+6. **Add a sensitive personal information opt-out.** If you process any of the categories CPRA defines as sensitive (precise geolocation, racial or ethnic origin, religious beliefs, union membership, genetic data, biometric identifiers, health, sexual orientation, financial account credentials, or contents of communications), you must offer consumers the right to limit your use to specific permitted purposes.
+7. **Document data retention policies.** For each category of personal information, define how long you retain it and the business reason for that period. CPRA requires that retention be limited to what is reasonably necessary.
+8. **Train employees who handle consumer data.** CPRA requires that employees responsible for handling consumer inquiries about privacy practices be trained on the law's requirements.
+
+---
+
+## CCPA/CPRA Enforcement and Penalties
+
+The California Privacy Protection Agency (CPPA) is the primary enforcement body for CCPA/CPRA, with concurrent authority shared with the California Attorney General. The CPPA can impose administrative fines of up to **$2,500 per unintentional violation** and **$7,500 per intentional violation**. For violations involving consumers under 16 years of age, the maximum penalty is $7,500 per violation regardless of intent.
+
+Penalties are calculated per violation, not per investigation. A single failure to honor GPC signals across a website could be characterized as one violation per affected consumer, multiplying the financial exposure dramatically. Several published CPPA settlements have exceeded $1 million.
+
+There is no automatic 30-day cure period under CPRA — the CPPA may, but is not required to, allow a cure opportunity. This is a meaningful distinction from most other state privacy laws, which mandate a notice-and-cure period before enforcement. California businesses do not have a guaranteed second chance.
+
+CCPA also grants consumers a private right of action for data breaches involving unencrypted or unredacted personal information, with statutory damages of $100 to $750 per consumer per incident. This is the only state privacy law with a private right of action of this kind. Class-action exposure under this provision can be substantial.
+
+---
+
+## Frequently Asked Questions
+
+### Does CCPA apply to my small business?
+
+CCPA applies if your business is for-profit, does business in California, and meets ANY ONE of: $25M+ annual revenue, processes data of 100,000+ California consumers, or derives 50%+ of annual revenue from selling California consumer data. You only need to meet one threshold for the law to apply.
+
+### Does my Shopify store need to comply with CCPA?
+
+If your Shopify store sells to California consumers and meets any one CCPA threshold, yes. Most national Shopify stores with $500K+ revenue should check whether they process data of 100,000+ California consumers annually — the consumer count threshold catches many mid-size stores that fall well below the $25M revenue line.
+
+### What is the difference between CCPA and CPRA?
+
+CPRA, which took full effect in 2023, amended and expanded the original CCPA. CPRA added the right to correct personal data, the right to limit use of sensitive personal information, data minimization requirements, mandatory data retention policies, and created the California Privacy Protection Agency as a dedicated enforcement body. If you were compliant with the original CCPA, you likely need CPRA updates — particularly around sensitive data, retention, and GPC signal handling.
+
+### What are the penalties for CCPA violations?
+
+The CPPA can impose fines up to $2,500 per unintentional violation and $7,500 per intentional violation. For violations involving minors, the penalty is $7,500 per violation. Consumers also have a private right of action for data breaches involving unencrypted personal information, with statutory damages of $100 to $750 per consumer per incident.
+
+### Do I need to honor the Global Privacy Control signal?
+
+Yes. CPRA explicitly requires covered businesses to detect and honor GPC signals as valid opt-out requests, automatically and at the technical level. You cannot require consumers to manually opt out if their browser is sending GPC. Failing to honor GPC has been a frequent enforcement target.
+
+### Is there a cure period under CCPA/CPRA?
+
+No automatic cure period exists under CPRA. The CPPA may grant a cure opportunity at its discretion, but it is not required to. This is different from most other state privacy laws, which mandate a 30- to 60-day cure window before enforcement actions can begin.
+
+---
+
+**Check if CCPA/CPRA applies to your business →** [Take the free 5-minute quiz](https://app.getpurview.com/quiz)
+
+*This guide is for informational purposes only and does not constitute legal advice. Last updated: April 2026.*
+
+---
+
+<FAQSchema questions={[
+  {
+    question: "Does CCPA apply to my small business?",
+    answer: "CCPA applies if your business is for-profit, does business in California, and meets ANY ONE of: $25M+ annual revenue, processes data of 100,000+ California consumers, or derives 50%+ of annual revenue from selling California consumer data. You only need to meet one threshold."
+  },
+  {
+    question: "Does my Shopify store need to comply with CCPA?",
+    answer: "If your Shopify store sells to California consumers and meets any one CCPA threshold, yes. Most national Shopify stores with $500K+ revenue should check whether they process data of 100,000+ California consumers annually."
+  },
+  {
+    question: "What is the difference between CCPA and CPRA?",
+    answer: "CPRA (2023) amended and expanded CCPA. CPRA added: right to correct data, right to limit sensitive data use, data minimization requirements, and created the CPPA enforcement agency. If you were compliant with original CCPA, you likely need CPRA updates."
+  },
+  {
+    question: "What are the penalties for CCPA violations?",
+    answer: "The CPPA can impose fines up to $2,500 per unintentional violation and $7,500 per intentional violation. For violations involving minors, the penalty is $7,500 per violation. Consumers also have a private right of action for data breaches."
+  },
+  {
+    question: "Do I need to honor the Global Privacy Control signal?",
+    answer: "Yes. CPRA explicitly requires covered businesses to detect and honor GPC signals as valid opt-out requests, automatically and at the technical level."
+  },
+  {
+    question: "Is there a cure period under CCPA/CPRA?",
+    answer: "No automatic cure period exists under CPRA. The CPPA may grant a cure opportunity at its discretion, but it is not required to."
+  }
+]} />
