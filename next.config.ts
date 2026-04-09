@@ -48,8 +48,6 @@ const nextConfig: NextConfig = {
     // guide mirrors are read from content/guides/*.mdx by /api/md/guides/[slug].
     return [
       { source: "/index.md", destination: "/api/md/index" },
-      { source: "/privacy.md", destination: "/api/md/privacy" },
-      { source: "/terms.md", destination: "/api/md/terms" },
       { source: "/blog.md", destination: "/api/md/blog-index" },
       { source: "/guides.md", destination: "/api/md/guides-index" },
       { source: "/blog/:slug.md", destination: "/api/md/blog/:slug" },

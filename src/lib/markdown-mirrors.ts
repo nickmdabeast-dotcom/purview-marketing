@@ -210,46 +210,16 @@ Scan your website in 10 seconds — free, no credit card required.
 
 ## Legal
 
-- [Privacy Policy](/privacy.md)
-- [Terms of Service](/terms.md)
+- [Privacy Policy](https://app.getpurview.com/privacy)
+- [Terms of Service](https://app.getpurview.com/terms)
 
 This site provides legal information, not legal advice. Consult a qualified attorney for legal guidance regarding privacy compliance for your specific business operations.
 
 © 2026 Purview LLC.
 `;
 
-const privacyMd = `# Privacy Policy — Purview
-
-Purview's privacy policy governs how we collect, use, and protect your data.
-
-Our privacy policy is being finalized. For questions, contact [nikolas@getpurview.com](mailto:nikolas@getpurview.com).
-
-## Related
-
-- [Homepage](/index.md)
-- [Terms of Service](/terms.md)
-
-© 2026 Purview LLC.
-`;
-
-const termsMd = `# Terms of Service — Purview
-
-Purview's terms of service set out the usage terms and conditions for our privacy compliance platform.
-
-Our terms of service are being finalized. For questions, contact [nikolas@getpurview.com](mailto:nikolas@getpurview.com).
-
-## Related
-
-- [Homepage](/index.md)
-- [Privacy Policy](/privacy.md)
-
-© 2026 Purview LLC.
-`;
-
 export const markdownMirrors: Record<string, string> = {
   index: indexMd,
-  privacy: privacyMd,
-  terms: termsMd,
 };
 
 export const markdownMirrorSlugs = Object.keys(markdownMirrors);

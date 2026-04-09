@@ -1,8 +1,8 @@
 import { ShieldCheck } from "lucide-react";
 
 const links = [
-  { href: "/privacy", label: "Privacy Policy" },
-  { href: "/terms", label: "Terms of Service" },
+  { href: "https://app.getpurview.com/privacy", label: "Privacy Policy", external: true },
+  { href: "https://app.getpurview.com/terms", label: "Terms of Service", external: true },
   { href: "https://app.getpurview.com/login", label: "Log In", external: true },
   { href: "mailto:nikolas@getpurview.com", label: "Contact" },
 ];
