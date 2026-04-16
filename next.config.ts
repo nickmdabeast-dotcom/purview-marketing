@@ -25,9 +25,13 @@ const securityHeaders = [
     key: "Permissions-Policy",
     value: "camera=(), microphone=(), geolocation=()",
   },
+  // TODO(security): Replace 'unsafe-inline' in script-src with a nonce-based
+  // allowlist. See follow-up prompt `04-nonce-based-csp-followup.md`. The
+  // current CSP is the minimum needed for Google Ads to function correctly;
+  // nonces will tighten this further without breaking analytics.
   {
     key: "Content-Security-Policy",
-    value: `default-src 'self'; script-src 'self' 'unsafe-inline'${process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : ""}; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://app.getpurview.com; frame-ancestors 'self'`,
+    value: `default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.googleadservices.com${process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : ""}; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://app.getpurview.com https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com https://td.doubleclick.net https://stats.g.doubleclick.net; frame-ancestors 'self'`,
   },
 ];
 

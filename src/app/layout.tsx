@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { MetaPixel } from "@/components/meta-pixel";
+import { GoogleAdsTag } from "@/components/google-ads-tag";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -77,6 +78,7 @@ export default function RootLayout({
         </a>
         {children}
         <MetaPixel />
+        <GoogleAdsTag />
       </body>
     </html>
   );

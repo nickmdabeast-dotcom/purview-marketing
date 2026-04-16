@@ -30,6 +30,16 @@ function setStoredConsent(value: "granted" | "denied"): void {
   const domainPart = isLocalhost ? "" : "; domain=.getpurview.com";
   const securePart = isLocalhost ? "" : "; Secure";
   document.cookie = `${COOKIE_NAME}=${value}${domainPart}; path=/; max-age=31536000; SameSite=Lax${securePart}`;
+
+  // Additive coordination primitive: notify sibling trackers (GoogleAdsTag)
+  // that live in the same layout so they can load within the same banner-click
+  // tick without each needing its own banner UI or cookie poll. Mirrors the
+  // dashboard app's MetaPixel implementation for consistency.
+  if (typeof window !== "undefined") {
+    window.dispatchEvent(
+      new CustomEvent("purview-consent-change", { detail: { state: value } }),
+    );
+  }
 }
 
 function isGpcEnabled(): boolean {
