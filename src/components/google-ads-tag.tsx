@@ -3,8 +3,7 @@
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 
-const GOOGLE_ADS_ID =
-  process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || "AW-18091538205";
+const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
 const COOKIE_NAME = "purview-consent";
 const CROSS_DOMAINS = ["getpurview.com", "app.getpurview.com"];
 
@@ -65,6 +64,7 @@ export function GoogleAdsTag(): null {
   const pathname = usePathname();
 
   useEffect(() => {
+    if (!GOOGLE_ADS_ID) return;
     if (loaded.current) return;
     if (isGpcEnabled()) return;
 
@@ -97,6 +97,7 @@ export function GoogleAdsTag(): null {
   // Fire a page_view on client-side route changes so each SPA navigation
   // registers as a separate page in the remarketing audience.
   useEffect(() => {
+    if (!GOOGLE_ADS_ID) return;
     if (!loaded.current || !window.gtag) return;
     window.gtag("event", "page_view", { page_path: pathname });
   }, [pathname]);
