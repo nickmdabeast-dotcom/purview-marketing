@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { ShieldCheck, X } from "lucide-react";
 
-const PIXEL_ID = "1218512860395251";
+const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
 const COOKIE_NAME = "purview-consent";
 
 type ConsentState = "granted" | "denied" | "pending";
@@ -51,6 +51,7 @@ function isGpcEnabled(): boolean {
 /** Dynamically injects Meta Pixel. Only called after explicit consent. */
 function loadPixelScript(): void {
   if (typeof window === "undefined" || window.fbq) return;
+  if (!PIXEL_ID) return;
 
   /* eslint-disable @typescript-eslint/no-explicit-any, prefer-rest-params, prefer-spread, @typescript-eslint/no-unused-expressions */
   const f: any = window;
@@ -82,6 +83,7 @@ function loadPixelScript(): void {
  * - Stores consent in a cookie shared across *.getpurview.com
  * - Dynamically loads fbevents.js ONLY after explicit opt-in
  * - Tracks PageView on every client-side route change
+ * - No-op if `NEXT_PUBLIC_META_PIXEL_ID` is unset
  */
 export function MetaPixel(): React.JSX.Element | null {
   const [consent, setConsent] = useState<ConsentState>("pending");
@@ -92,6 +94,7 @@ export function MetaPixel(): React.JSX.Element | null {
 
   // On mount: check GPC signal and stored consent cookie
   useEffect(() => {
+    if (!PIXEL_ID) return;
     if (isGpcEnabled()) {
       setGpcBlocked(true);
       setConsent("denied");
